@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 70px;
+        }
+
+        img.rounded-circle {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .carousel img {
+            max-height: 400px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Meu Currículo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Início</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Navegação
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#accordion">Sobre Mim</a></li>
+                            <li><a class="dropdown-item" href="#accordion">Portfólio</a></li>
+                            <li><a class="dropdown-item" href="#accordion">Contato</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container text-center mt-4">
+        <h1>Ana Luiza Francisco</h1>
+        <p>Analista e Desenvolvedora de Sistemas</p>
+    </div>
+
+    <div class="container my-5" id="accordion">
+        <h2 class="mb-4 text-center">Informações</h2>
+        <div class="accordion" id="curriculoAccordion">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSobre">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSobre" aria-expanded="true">
+                        Sobre Mim
+                    </button>
+                </h2>
+                <div id="collapseSobre" class="accordion-collapse collapse show" data-bs-parent="#curriculoAccordion">
+                    <div class="accordion-body">
+                        <div class="card mb-3 shadow">
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-4 text-center p-3">
+                                    <img src="perfil.jpg" class="rounded-circle" alt="Minha Foto">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Ana Luiza Francisco</h5>
+                                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                            Assumenda sapiente ad reprehenderit unde, excepturi non animi enim eos, modi
+                                            id facere iusto laudantium totam ratione saepe molestias omnis, quasi illum.
+                                        </p>
+                                        <div>
+                                            <span class="badge bg-primary me-1">HTML</span>
+                                            <span class="badge bg-success me-1">CSS</span>
+                                            <span class="badge bg-warning text-dark me-1">JavaScript</span>
+                                            <span class="badge bg-info text-dark me-1">Bootstrap</span>
+                                            <span class="badge bg-secondary">Front-End</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingPortfolio">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsePortfolio">
+                        Portfólio
+                    </button>
+                </h2>
+                <div id="collapsePortfolio" class="accordion-collapse collapse" data-bs-parent="#curriculoAccordion">
+                    <div class="accordion-body">
+                        <p>Confira alguns dos meus projetos:</p>
+                        <div class="mx-auto" style="max-width: 800px;">
+                            <div id="carouselPortfolio" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+
+                                    <div class="carousel-item active">
+                                        <a data-bs-toggle="modal" data-bs-target="#modalProjeto1">
+                                            <img src="projeto1.jpg" class="d-block w-100 rounded" alt="Projeto 1">
+                                        </a>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <a data-bs-toggle="modal" data-bs-target="#modalProjeto2">
+                                            <img src="projeto2.jpg" class="d-block w-100 rounded" alt="Projeto 2">
+                                        </a>
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <a data-bs-toggle="modal" data-bs-target="#modalProjeto3">
+                                            <img src="projeto3.jpg" class="d-block w-100 rounded" alt="Projeto 3">
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselPortfolio"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselPortfolio"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingContato">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContato">
+                    Contato
+                  </button>
+                </h2>
+                <div id="collapseContato" class="accordion-collapse collapse" data-bs-parent="#curriculoAccordion">
+                  <div class="accordion-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+                      </div>
+                      <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+                      </div>
+                      <div class="mb-3">
+                        <label for="mensagem" class="form-label">Mensagem</label>
+                        <textarea class="form-control" id="mensagem" rows="4" placeholder="Escreva sua mensagem"></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalProjeto1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Projeto 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="projeto1.png" class="img-fluid rounded mb-3">
+                    <p>Calculadora desenvolvida em JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalProjeto2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Projeto 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="projeto2.png" class="img-fluid rounded mb-3">
+                    <p>Jogo da Velha desenvolvida em Python</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalProjeto3" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Projeto 3</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="projeto3.png" class="img-fluid rounded mb-3">
+                    <p>Aplicativo para dispositivos móveis desenvolvido para com objetivo de organizar o estoque das lojas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
